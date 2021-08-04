@@ -1,26 +1,27 @@
-@import "../../libs/normalize-scss/sass/normalize/import-now";
+@use "../../libs/normalize-scss/sass/normalize/import-now";
 
-@import "variables";
-@import "skin";
-@import "mixins-media";
-@import "mixins";
+@use "presets/variables";
+@use "presets/skin";
+@use "mixins/mixins-media";
+@use "mixins/mixins";
 
-@import "common";
+@use "common/classes";
+@use "common/typography";
 
-@import "header/header";
-@import "header/header-logo";
-@import "header/header-menu";
+@use "components/header/header";
+@use "components/header/header-logo";
+@use "components/header/header-menu";
 
-@import "main/main";
-@import "main/main-breadcrumb";
-@import "main/main-content";
-@import "main/main-content-item";
+@use "components/main/main";
+@use "components/main/main-breadcrumb";
+@use "components/main/main-content";
+@use "components/main/main-content-item";
 
-@import "aside/left";
-@import "aside/right";
+@use "components/aside/left";
+@use "components/aside/right";
 
-@import "widgets/widgets";
-@import "widgets/search";
-@import "widgets/categories";
-@import "widgets/news";
-@import "footer";
+@use "components/widgets/widgets";
+@use "components/widgets/search";
+@use "components/widgets/categories";
+@use "components/widgets/news";
+@use "components/footer/footer";

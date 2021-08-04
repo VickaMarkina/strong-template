@@ -1,5 +1,7 @@
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 
+@use "sass:math";
+
 @import "variables";
 // After the default variables are set, import the required Compass partials.
 // Feel free to move these lines to your own initialization partial.
@@ -82,7 +84,7 @@ h1 {
     @include adjust-font-size-to( $h1-font-size );
   }
   @else {
-    font-size: if($rhythm-unit == "px", $h1-font-size, unquote("#{$h1-font-size / $base-font-size}#{$rhythm-unit}"));
+    font-size: if($rhythm-unit == "px", $h1-font-size, unquote("#{math.div($h1-font-size, $base-font-size)}#{$rhythm-unit}"));
   }
 
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */

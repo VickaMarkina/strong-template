@@ -1,2 +1,29 @@
 @use "../../presets/" as *;
 @use "../../mixins/" as *;
+
+.header-logo {
+  padding: 45px 15px 45px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__image {
+    max-width: 400px;
+    margin-bottom: $gap;
+  }
+
+  span:first-of-type {
+    text-transform: uppercase;
+    font-size: 42px;
+    font-family: $font-header;
+    line-height: 3.5rem;
+    letter-spacing: 5px;
+    font-weight: 300;
+  }
+
+  span:last-of-type {
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    line-height: 1.4em;
+  }
+}

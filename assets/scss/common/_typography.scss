@@ -11,11 +11,11 @@ html {
   font-family: $font-main;
   font-size: $font-size;
   color: $color-light;
-  overflow-y: scroll;
 }
 
 body {
   max-width: 1380px;
+  padding: 0 $gap 0 $gap;
   margin: 0 auto;
   background-image: url(../../img/global-bg.jpg);
   background-color: $color-warning;

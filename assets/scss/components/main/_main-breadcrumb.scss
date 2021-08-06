@@ -1,2 +1,41 @@
 @use "../../presets/" as *;
 @use "../../mixins/" as *;
+
+.main-breadcrumb {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  border-radius: 7px;
+  text-align: end;
+  padding: 8px 12px 8px 12px;
+  margin-bottom: $gap;
+  letter-spacing: 2px;
+
+  span {
+    padding-right: 1px;
+    &:last-of-type {
+      padding-right: 7px;
+      color: $color-gray;
+      font-weight: normal;
+    }
+
+    a {
+      font-weight: bold;
+
+      &:hover {
+        @include text-shadow;
+        color: $color-accent;
+      }
+
+      &:focus {
+        color: $color-accent;
+      }
+    }
+  }
+  i {
+    color: $color-gray;
+    font-weight: bold;
+  }
+}

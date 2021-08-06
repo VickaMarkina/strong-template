@@ -1,2 +1,10 @@
 @use "../presets/" as *;
 @use "../mixins/" as *;
+
+.container {
+  display: grid;
+  grid-template-areas: "l m r";
+  grid-template-columns: 220px 1fr 240px;
+  gap: $gap;
+  margin-top: $gap;
+}

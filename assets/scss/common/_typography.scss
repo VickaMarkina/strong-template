@@ -11,6 +11,8 @@ html {
   font-family: $font-main;
   font-size: $font-size;
   color: $color-light;
+  padding-bottom: 10px;
+  line-height: 1.5rem;
 }
 
 body {
@@ -28,4 +30,12 @@ body {
 a {
   text-decoration: $color-warning;
   color: $color-light;
+}
+
+h3 {
+  @include block-header;
+  font-size: 1.17rem;
+  margin-top: 5px;
+  padding-bottom: 10px;
+  line-height: 1.5rem;
 }

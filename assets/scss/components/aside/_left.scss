@@ -1,2 +1,6 @@
 @use "../../presets/" as *;
 @use "../../mixins/" as *;
+
+.left {
+  grid-area: l;
+}

@@ -1,2 +1,40 @@
 @use "../../presets/" as *;
 @use "../../mixins/" as *;
+
+.widget-search {
+  &__form {
+    position: relative;
+    max-width: 100%;
+    margin: 15px 0 7px;
+  }
+
+  &__input {
+    width: 100%;
+    height: $gap;
+    padding: 7px 8px 7px 40px;
+    border: 1px solid rgba($color-light, 0.1);
+    border-radius: 4px;
+    outline: none;
+    background: rgba($color-light, 0.1);
+    text-overflow: ellipsis;
+    font-size: 0.85rem;
+
+    &::placeholder {
+      color: $color-gray;
+    }
+  }
+
+  &__submit {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: $gap;
+    height: $gap;
+    border: none;
+    background: rgba($color-light, 0);
+    border-right: 1px solid rgba($color-light, 0.1);
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+    color: $color-light;
+  }
+}

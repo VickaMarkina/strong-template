@@ -1,2 +1,67 @@
 @use "../../presets/" as *;
 @use "../../mixins/" as *;
+
+.widget-news {
+  // &__content {
+  // }
+  &__item {
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px 7.5px;
+      padding: 0 15px 7.5px;
+      transition: 0.5s;
+    }
+
+    &-title {
+      @include text-shortener;
+      margin: 0 0 10px;
+      letter-spacing: 1px;
+      font-weight: 300;
+      transition: 0.5s;
+    }
+
+    &-image {
+      max-width: 75px;
+      max-height: 75px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    &-image img {
+      max-width: 100%;
+      display: block;
+      transition: transform 0.5s;
+    }
+
+    &-except {
+      @include block-with-text;
+      max-width: calc(100% - 75px);
+      padding-left: 10px;
+      color: $color-gray;
+      transition: color 0.5s;
+    }
+
+    :hover {
+      .widget-news__item-wrapper {
+        background: radial-gradient(
+          ellipse at center,
+          rgba(0, 0, 0, 0.65) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+      .widget-news__item-title {
+        @include text-shadow;
+        color: $color-accent;
+      }
+
+      .widget-news__item-image img {
+        transform: scale(1.1);
+      }
+
+      .widget-news__item-except {
+        color: $color-light;
+      }
+    }
+  }
+}

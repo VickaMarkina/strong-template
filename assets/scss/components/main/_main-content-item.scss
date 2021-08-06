@@ -1,2 +1,11 @@
 @use "../../presets/" as *;
 @use "../../mixins/" as *;
+
+.main-content {
+  // &__body{}
+
+  &__item {
+    border-radius: 7px;
+    border: 2px solid rgba($color-dark, 0.3);
+  }
+}

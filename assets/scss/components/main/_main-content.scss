@@ -1,2 +1,19 @@
 @use "../../presets/" as *;
 @use "../../mixins/" as *;
+
+.main-content__title {
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  border-radius: 7px;
+  font-size: 2rem;
+  margin: 20px 0 20px 0;
+  padding: 8px 12px 8px 12px;
+  color: $color-light;
+  font-family: $font-header;
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: 3px;
+}

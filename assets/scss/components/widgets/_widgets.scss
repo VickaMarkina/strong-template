@@ -1,2 +1,16 @@
 @use "../../presets/" as *;
 @use "../../mixins/" as *;
+
+.widget {
+  @include bg-color;
+  border-radius: 7px;
+  padding: 15px;
+  margin-bottom: 15px;
+
+  &-text {
+    span {
+      color: $color-gray;
+      line-height: 2em;
+    }
+  }
+}

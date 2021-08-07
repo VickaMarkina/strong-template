@@ -1,2 +1,26 @@
 @use "../../presets/" as *;
 @use "../../mixins/" as *;
+
+.footer {
+  display: grid;
+  grid-template-areas: "a1 a2 a3 a4" "a5 a5 a5 a5";
+  grid-template-columns: repeat(4, 1fr);
+
+  &-item {
+    margin-right: 15px;
+
+    &:nth-of-type(4) {
+      margin-right: 0;
+    }
+
+    &:nth-of-type(5) {
+      margin-right: 0;
+    }
+  }
+}
+
+@for $i from 1 through 5 {
+  .footer-item:nth-of-type(#{$i}) {
+    grid-area: a#{$i};
+  }
+}

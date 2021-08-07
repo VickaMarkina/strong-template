@@ -16,6 +16,11 @@
     span {
       color: $color-gray;
     }
+    &__left {
+      @include xs {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &-footer__button {

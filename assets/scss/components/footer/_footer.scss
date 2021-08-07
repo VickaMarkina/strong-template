@@ -3,8 +3,21 @@
 
 .footer {
   display: grid;
-  grid-template-areas: "a1 a2 a3 a4" "a5 a5 a5 a5";
-  grid-template-columns: repeat(4, 1fr);
+
+  @include md-min {
+    grid-template-areas: "a1 a2 a3 a4" "a5 a5 a5 a5";
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include md-xs {
+    grid-template-areas: "a1 a2" "a3 a4" "a5 a5";
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include xs {
+    grid-template-areas: "a1" "a2" "a3" "a4" "a5";
+    grid-template-columns: 1fr;
+  }
 
   &-item {
     margin-right: 15px;

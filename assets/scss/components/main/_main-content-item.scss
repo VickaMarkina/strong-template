@@ -5,18 +5,49 @@
   &__body {
     max-width: 100%;
     display: grid;
-    grid-template-areas:
-      "a1 a2 a3"
-      "a4 a5 a6"
-      "a7 a8 a9"
-      "a10 a11 a12";
-    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    margin-bottom: $gap;
+
+    @include sm-min {
+      grid-template-areas:
+        "a1 a2 a3"
+        "a4 a5 a6"
+        "a7 a8 a9"
+        "a10 a11 a12";
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include sm-xx {
+      grid-template-areas:
+        "a1 a2"
+        "a3 a4"
+        "a5 a6"
+        "a7 a8 "
+        "a9 a10"
+        "a11 a12";
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include xx {
+      grid-template-areas:
+        "a1"
+        "a2"
+        "a3"
+        "a4"
+        "a5"
+        "a6"
+        "a7"
+        "a8"
+        "a9"
+        "a10"
+        "a11"
+        "a12";
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
     &-wrapper {
+      max-width: 100%;
       overflow: hidden;
       position: relative;
       border-radius: 7px;
@@ -34,6 +65,7 @@
       }
     }
     h3 {
+      max-width: 100%;
       @include text-shadow;
       @include text-shortener;
       color: $color-light;

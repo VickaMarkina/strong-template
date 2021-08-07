@@ -17,7 +17,6 @@ html {
 
 body {
   max-width: 1380px;
-  padding: 0 $gap 0 $gap;
   margin: 0 auto;
   background-image: url(../../img/global-bg.jpg);
   background-color: $color-warning;
@@ -25,6 +24,14 @@ body {
   background-position: center;
   position: relative;
   background-attachment: fixed;
+
+  @include lg-min {
+    padding: 0 $gap 0 $gap;
+  }
+
+  @include lg {
+    padding: 0 15px 0 15px;
+  }
 }
 
 a {

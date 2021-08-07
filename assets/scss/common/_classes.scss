@@ -3,8 +3,30 @@
 
 .container {
   display: grid;
-  grid-template-areas: "l m r";
-  grid-template-columns: 220px 1fr 240px;
-  gap: $gap;
   margin-top: $gap;
+  margin-bottom: 15px;
+
+  @include lg-min {
+    grid-template-areas: "l m r";
+    grid-template-columns: 220px 1fr 240px;
+    gap: $gap;
+  }
+
+  @include lg-md {
+    grid-template-areas: "l m" "r r";
+    grid-template-columns: 220px 1fr;
+    gap: $gap;
+  }
+
+  @include md-xs {
+    grid-template-areas: "m m" "l r";
+    grid-template-columns: 50% 50%;
+    gap: 15px;
+  }
+
+  @include xs {
+    grid-template-areas: "m" "l" "r";
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 }

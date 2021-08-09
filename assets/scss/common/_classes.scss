@@ -20,13 +20,13 @@
 
   @include md-xs {
     grid-template-areas: "m m" "l r";
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, calc(50% - 7px));
     gap: 15px;
   }
 
   @include xs {
     grid-template-areas: "m" "l" "r";
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     gap: 15px;
   }
 }

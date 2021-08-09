@@ -9,7 +9,6 @@
     rgba(0, 0, 0, 0) 100%
   );
   border-radius: 7px;
-  font-size: 2rem;
   margin: $gap 0 $gap 0;
   padding: 8px 12px 8px 12px;
   color: $color-light;
@@ -17,4 +16,16 @@
   font-weight: 300;
   line-height: 1.5em;
   letter-spacing: 3px;
+
+  @include sm-min {
+    font-size: 2rem;
+  }
+
+  @include sm-xs {
+    font-size: 1.5rem;
+  }
+
+  @include xs {
+    font-size: 1rem;
+  }
 }

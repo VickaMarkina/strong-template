@@ -12,6 +12,19 @@
     align-items: center;
     margin: 0;
     padding: 0;
+
+    @include sm {
+      display: none;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    &.active a {
+      color: $color-accent-dark;
+      background: rgba($color-dark 0.4);
+      @include text-shadow;
+    }
   }
 
   &__link {
@@ -31,9 +44,101 @@
   }
 }
 
-// для активной кнопки
-//  {
-//   background-color: rgba($color-dark, 0.4);
-//   color: $color-accent-dark;
-//   @include text-shadow;
-// }
+.navbar-btn {
+  width: 30px;
+  height: 22.5px;
+  position: relative;
+  transform: rotate(0deg);
+  cursor: pointer;
+  margin: auto;
+
+  &__container {
+    width: 50px;
+    height: 50px;
+    background-color: rgba($color-dark, 0.3);
+    margin: 0 auto;
+    position: relative;
+    padding-top: 14px;
+    @include sm-min {
+      display: none;
+    }
+  }
+
+  &__row {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    background: $color-light;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+
+    &:nth-child(even) {
+      left: 50%;
+      border-radius: 0 3px 3px 0;
+    }
+
+    &:nth-child(odd) {
+      left: 0px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      top: 0px;
+    }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      top: 9px;
+    }
+
+    &:nth-child(5),
+    &:nth-child(6) {
+      top: 18px;
+    }
+  }
+
+  &.active span {
+    &:nth-child(1),
+    &:nth-child(6) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(2),
+    &:nth-child(5) {
+      transform: rotate(-45deg);
+    }
+
+    &:nth-child(1) {
+      left: 1.6px;
+      top: 2.3px;
+    }
+
+    &:nth-child(2) {
+      left: calc(50% - 1.6px);
+      top: 2.3px;
+    }
+
+    &:nth-child(3) {
+      left: -50%;
+      opacity: 0;
+    }
+
+    &:nth-child(4) {
+      left: 100%;
+      opacity: 0;
+    }
+
+    &:nth-child(5) {
+      left: 1.6px;
+      top: 14.5px;
+    }
+
+    &:nth-child(6) {
+      left: calc(50% - 1.6px);
+      top: 14.5px;
+    }
+  }
+}

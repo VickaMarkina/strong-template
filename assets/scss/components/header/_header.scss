@@ -4,4 +4,5 @@
 .header {
   @include bg-color;
   border-radius: 0 0 7px 7px;
+  overflow: hidden;
 }

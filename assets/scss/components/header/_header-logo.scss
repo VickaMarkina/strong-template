@@ -2,30 +2,66 @@
 @use "../../mixins/" as *;
 
 .header-logo {
-  padding: 45px 15px 45px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 
+  @include sm-min {
+    padding: 45px 15px 45px 15px;
+  }
+
+  @include sm {
+    padding: 15px;
+  }
+
   &__image {
-    max-width: 400px;
-    margin-bottom: $gap;
+    @include sm-min {
+      max-width: 400px;
+      margin-bottom: $gap;
+    }
+
+    @include sm {
+      max-width: 300px;
+      margin-bottom: 15px;
+    }
   }
 
   span:first-of-type {
     text-transform: uppercase;
-    font-size: 42px;
     font-family: $font-header;
-    line-height: 3.5rem;
     letter-spacing: 5px;
     margin-bottom: -5px;
     font-weight: 300;
+
+    @include sm-min {
+      line-height: 3.5rem;
+      font-size: 42px;
+    }
+
+    @include sm-xs {
+      line-height: 2.5rem;
+      font-size: 2rem;
+    }
+
+    @include xs {
+      line-height: 2rem;
+      font-size: 1.5rem;
+    }
   }
 
   span:last-of-type {
-    letter-spacing: 0.2em;
-    font-weight: 700;
-    line-height: 1.4em;
+    @include sm-min {
+      letter-spacing: 0.2em;
+      font-weight: 700;
+      line-height: 1.4em;
+    }
+
+    @include sm {
+      letter-spacing: 0.1em;
+      line-height: 1.25em;
+      font-size: 0.875rem;
+      margin-bottom: -5px;
+    }
   }
 }

@@ -22,7 +22,7 @@
   &__item {
     &.active a {
       color: $color-accent-dark;
-      background: rgba($color-dark 0.4);
+      background: rgba($color-dark, 0.4);
       @include text-shadow;
     }
   }

@@ -45,23 +45,22 @@
 }
 
 .navbar-btn {
-  width: 30px;
-  height: 22.5px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba($color-dark, 0.3);
+  margin: 0 auto;
   position: relative;
-  transform: rotate(0deg);
-  cursor: pointer;
-  margin: auto;
-
+  padding-top: 14px;
+  @include sm-min {
+    display: none;
+  }
   &__container {
-    width: 50px;
-    height: 50px;
-    background-color: rgba($color-dark, 0.3);
-    margin: 0 auto;
+    width: 30px;
+    height: 22.5px;
     position: relative;
-    padding-top: 14px;
-    @include sm-min {
-      display: none;
-    }
+    transform: rotate(0deg);
+    cursor: pointer;
+    margin: auto;
   }
 
   &__row {
